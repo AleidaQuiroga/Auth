@@ -1,0 +1,76 @@
+[
+  {
+    "ContainingType": "Auth.Controllers.AuthController",
+    "Method": "AddUser",
+    "RelativePath": "AddUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "addUserIM",
+        "Type": "Auth.Models.InModels.AddUserIM",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Auth.Controllers.AuthController",
+    "Method": "ChangePassword",
+    "RelativePath": "ChangePassword",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "changePasswordIM",
+        "Type": "Auth.Models.InModels.ChangePasswordIM",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Auth.Controllers.AuthController",
+    "Method": "DeleteUser",
+    "RelativePath": "DeleteUser",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deleteUserIM",
+        "Type": "Auth.Models.InModels.DeleteUserIM",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Auth.Controllers.AuthController",
+    "Method": "GetUsers",
+    "RelativePath": "GetUsers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Auth.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginIM",
+        "Type": "Auth.Models.InModels.LoginIM",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
