@@ -7,8 +7,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 namespace Auth.Controllers
 {
     public class AuthController : Controller
-    {
-        //Comentario de prueba
+    {        
         private readonly IAuth_Service _authService;
         public AuthController(IAuth_Service authService)
         {
