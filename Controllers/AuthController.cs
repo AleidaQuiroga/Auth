@@ -14,6 +14,46 @@ namespace Auth.Controllers
             _authService = authService;
         }
 
+        [HttpPost("prueba")]
+        public async Task<IActionResult> prueba([FromBody] AddUserIM addUserIM)
+        {
+            try
+
+            {
+                if (ModelState.IsValid)
+                {
+                    var result = await _authService.AddUser(addUserIM);
+
+                    if (result.IsSuccess)
+                    {
+                        return StatusCode(StatusCodes.Status200OK,
+                        new
+                        {
+                            IsSuccess = result.IsSuccess,
+                            Message = result.Message,
+                            Data = result.Data,
+                        });
+                    }
+
+                    return StatusCode(StatusCodes.Status200OK,
+                        new
+                        {
+                            IsSuccess = false,
+                            Message = result.Message,
+                            Data = result.Data,
+                        });
+                }
+
+                return BadRequest("Algunas propiedades no son válidas.");
+
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                    new { IsSuccess = false, Message = "Error interno del servidor.", Data = ex.Message });
+            }
+        }
+
         [HttpPost("AddUser")]
         public async Task<IActionResult> AddUser([FromBody] AddUserIM addUserIM)
         {
